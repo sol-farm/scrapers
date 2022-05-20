@@ -1,0 +1,1 @@
+ALTER TABLE v1_obligation_ltv ADD COLUMN leveraged_farm VARCHAR NOT NULL DEFAULT '';

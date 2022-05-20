@@ -1,0 +1,51 @@
+[package]
+name = "common"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+serum_dex = { git = "https://github.com/project-serum/serum-dex", rev = "1f6d5867019e242a470deed79cddca0d1f15e0a3", features = ["no-entrypoint"] }
+uint = "0.8"
+num-derive = "0.3"
+num-traits = "0.2"
+thiserror = "1.0"
+bytemuck = "1.7.2"
+solana-program = "1.9.13"
+anchor-lang = "0.24.2"
+anchor-spl = "0.24.1"
+arrayref = "0.3.6"
+safe-transmute = "0.11.2"
+static-pubkey = "1.0.2"
+spl-token = "3.2.0"
+solend-token-lending = {git = "https://github.com/solendprotocol/solana-program-library.git", package = "spl-token-lending", rev = "91c955e9989ff026daef2a1daf2b42fd671a4306", features = ["no-entrypoint"]}
+spl-token-swap = {git = "https://github.com/solana-labs/solana-program-library.git", rev = "12732f8d5a96bbbfcf0274b208849b6de0e5b0b0", features = ["no-entrypoint"]}
+spl-token-lending = {git = "https://github.com/solana-labs/solana-program-library.git", rev = "12732f8d5a96bbbfcf0274b208849b6de0e5b0b0", features = ["no-entrypoint"]}
+serde = { version = "1.0", features = ["derive"] }
+bincode = "1.3.3"
+# update mango libs to 4.3.4 instead of 4.3.1
+mango-common = {git = "https://github.com/blockworks-foundation/mango-v3.git", rev = "0b33f75380a8c6b8b1b97d01fb7c3442e9d159ec"}
+mango-macro = {git = "https://github.com/blockworks-foundation/mango-v3.git", rev = "0b33f75380a8c6b8b1b97d01fb7c3442e9d159ec"}
+mango = {git = "https://github.com/blockworks-foundation/mango-v3.git", rev = "0b33f75380a8c6b8b1b97d01fb7c3442e9d159ec", features = ["no-entrypoint"]}
+fixed = { version = "1.11.0", features = ["serde"] }
+fixed-macro = "^1.1.1"
+enumflags2 = "^0.6.4"
+static_assertions = "^1.1.0"
+arrform = {git = "https://github.com/sol-farm/arrform.git", rev = "fdbb0cfe18eadbff99cc8cd63f1b5a43df70e665"}
+port-variable-rate-lending-instructions = "0.2.9"
+derivative = {git = "https://github.com/sol-farm/rust-derivative.git", rev = "ff66e36f57d14c0a910e77d6e7f4d3dae307de7e"}
+sighashdb = {version = "0.1.13"}
+
+[dev-dependencies]
+proptest = "1.0.0"
+solana-client = "1.9.13"
+data-encoding = "2.3.2"
+ring = "0.16.20"
+
+[features]
+# need to make this the actual default feature set upon release
+# to prevent v2 vaults from importing any data related to v1
+#default = []
+default = ["v1"]
+v1 = []

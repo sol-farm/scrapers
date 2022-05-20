@@ -1,0 +1,1 @@
+ALTER TABLE vault DROP CONSTRAINT vault_farm_name_key; 

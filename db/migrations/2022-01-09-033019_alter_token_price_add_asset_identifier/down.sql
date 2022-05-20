@@ -1,0 +1,1 @@
+ALTER TABLE token_price DROP COLUMN asset_identifier;

@@ -1,0 +1,1 @@
+ALTER TABLE token_price ADD COLUMN platform VARCHAR NOT NULL DEFAULT '';

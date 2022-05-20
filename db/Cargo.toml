@@ -1,0 +1,30 @@
+[package]
+name = "db"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+diesel = { version = "1.4.7", features = ["postgres", "chrono", "r2d2"] }
+dotenv = "0.15.0"
+thiserror = "1.0.25"
+anyhow = "1.0"
+chrono = "0.4.19"
+config = { path = "../config" }
+average = "0.13.1"
+log = "0.4.14"
+diesel_migrations = {version = "1.4.0", features = ["postgres"] }
+diesel_derives_extra = "0.2.0"
+diesel_derives_traits = "0.2.0"
+into_query = {version = "0.2.3", features = ["postgres"]}
+r2d2 = "0.8.9"
+diesel_logger = "^0.1.1"
+url = "2.2.2"
+oracle = {path = "../oracle"}
+arrform = {git = "https://github.com/sol-farm/arrform.git", rev = "fdbb0cfe18eadbff99cc8cd63f1b5a43df70e665"}
+once_cell = "1.9.0"
+diesel_filter = { version = "0.1.2", features = ["pagination", "serialize"] }
+utils = {path = "../utils" }
+hashbrown = "0.12"
+solana-program = "1.9.13"

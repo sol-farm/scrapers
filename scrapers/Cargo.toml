@@ -1,0 +1,37 @@
+[package]
+name = "scrapers"
+version = "0.1.0"
+authors = ["bonedaddy <boned4ddy@protonmail.com>"]
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+config = { path = "../config" }
+crossbeam = "0.8"
+crossbeam-utils = "0.8"
+crossbeam-channel = "0.5"
+db = { path = "../db" }
+diesel = "1.4.7"
+solana-account-decoder = "1.9.13"
+serde = { version = "1.0", features = ["derive"] }
+serde_yaml = "0.8"
+thiserror = "1.0.25"
+anyhow = "1.0.41"
+simplelog = "0.10.0"
+log = "0.4.14"
+serde_json = "1.0.64"
+solana-sdk = "1.9.13"
+solana-client = "1.9.13"
+anchor-client = "0.24.1"
+vaults = { path = "../programs/vaults", features = ["no-entrypoint"]}
+chrono = "0.4.19"
+common = {path = "../common"}
+oracle = {path = "../oracle"}
+tokio = { version = "1.18.2", features = ["rt-multi-thread","full"] }
+crossbeam-queue = "0.3.2"
+spl-token = "3.2.0"
+stake_lib = {path = "../stake_lib" }
+spl-associated-token-account = "1.0.3"
+arrform = {git = "https://github.com/sol-farm/arrform.git", rev = "fdbb0cfe18eadbff99cc8cd63f1b5a43df70e665"}
+utils = {path = "../utils"}

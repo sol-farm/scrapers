@@ -1,0 +1,1 @@
+DROP TABLE historic_tshare_price;

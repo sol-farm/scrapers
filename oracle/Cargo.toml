@@ -1,0 +1,31 @@
+[package]
+name = "oracle"
+version = "0.1.0"
+edition = "2021"
+description = "solana oracle related utilities"
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+anchor-client = "0.24.1"
+anchor-lang = "0.24.2"
+anyhow = "1.0.44"
+bytemuck = "1.7.2"
+log = "0.4.14"
+num-traits = "0.2.14"
+serum_dex = { git = "https://github.com/project-serum/serum-dex", rev = "1f6d5867019e242a470deed79cddca0d1f15e0a3", features = ["no-entrypoint"] }
+spl-token = "3.2.0"
+common = {path = "../common"}
+config = {path = "../config"}
+chrono = "0.4.19"
+static-pubkey = "1.0.2"
+solana-program = "1.9.13"
+fixed = { version = "1.11.0", features = ["serde"] }
+az = "1"
+tokio = { version = "1.17.0", features = ["rt-multi-thread", "macros"] } 
+solana-account-decoder = "1.9.13"
+optimize = { git = "https://github.com/sol-farm/optimize", rev="3f7617743134fc26fb6a47a282e42818436dc264", features = [] }
+ndarray = "0.11"
+rust_decimal = "1.19.0"
+average = "0.13.1"
+vaults = { path = "../programs/vaults", features = ["cpi"] }
+so-defi-atrix = "0.1.16"

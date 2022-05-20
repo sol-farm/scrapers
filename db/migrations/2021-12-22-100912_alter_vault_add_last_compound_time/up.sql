@@ -1,0 +1,1 @@
+ALTER TABLE vault ADD COLUMN last_compound_ts TIMESTAMPTZ;

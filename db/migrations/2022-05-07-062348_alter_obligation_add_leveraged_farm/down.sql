@@ -1,0 +1,1 @@
+ALTER TABLE v1_obligation_ltv DROP COLUMN leveraged_farm VARCHAR;

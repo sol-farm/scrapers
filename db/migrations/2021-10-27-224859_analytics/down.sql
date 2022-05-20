@@ -1,0 +1,3 @@
+-- This file should undo anything in `up.sql`
+DROP TABLE token_price;
+DROP TABLE vault_tvl;

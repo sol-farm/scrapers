@@ -1,0 +1,1 @@
+ALTER TABLE token_price ADD COLUMN asset_identifier VARCHAR NOT NULL DEFAULT '';
